@@ -1,0 +1,82 @@
+export default {
+  async fetch(request, env) {
+    const allowedOrigin = 'https://iamdonwong.github.io';
+
+    if (request.method === 'OPTIONS') {
+      return new Response(null, {
+        status: 204,
+        headers: corsHeaders(allowedOrigin)
+      });
+    }
+
+    if (request.method !== 'POST') {
+      return json({ success: false, error: 'Method not allowed' }, 405, allowedOrigin);
+    }
+
+    const contentType = request.headers.get('content-type') || '';
+    let data = {};
+
+    if (contentType.includes('application/json')) {
+      data = await request.json();
+    } else if (contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded')) {
+      const formData = await request.formData();
+      data = Object.fromEntries(formData.entries());
+    } else {
+      return json({ success: false, error: 'Unsupported content type' }, 400, allowedOrigin);
+    }
+
+    const payload = {
+      clientName: String(data.clientName || '').trim(),
+      clientPhone: String(data.clientPhone || '').trim(),
+      clientEmail: String(data.clientEmail || '').trim(),
+      employmentStatus: String(data.employmentStatus || '').trim(),
+      monthlyIncome: String(data.monthlyIncome || '').trim(),
+      totalDebt: String(data.totalDebt || '').trim(),
+      debtTypes: String(data.debtTypes || '').trim(),
+      clientMessage: String(data.clientMessage || '').trim(),
+      submittedAt: new Date().toISOString(),
+      ip: request.headers.get('CF-Connecting-IP') || '',
+      ua: request.headers.get('User-Agent') || ''
+    };
+
+    if (!payload.clientName || !payload.clientPhone || !payload.clientEmail || !payload.employmentStatus || !payload.monthlyIncome || !payload.totalDebt || !payload.debtTypes) {
+      return json({ success: false, error: 'Missing required fields' }, 400, allowedOrigin);
+    }
+
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.clientEmail);
+    if (!emailOk) {
+      return json({ success: false, error: 'Invalid email' }, 400, allowedOrigin);
+    }
+
+    const income = Number(payload.monthlyIncome);
+    const debt = Number(payload.totalDebt);
+
+    if (Number.isNaN(income) || income < 0 || Number.isNaN(debt) || debt < 0) {
+      return json({ success: false, error: 'Invalid numeric values' }, 400, allowedOrigin);
+    }
+
+    console.log('New form submission', payload);
+
+    // Phase 1:
+    // This first version only accepts and logs the form.
+    // Next step can add email, Google Sheets, Airtable, D1, or webhook forwarding.
+
+    return json({ success: true }, 200, allowedOrigin);
+  }
+};
+
+function corsHeaders(origin) {
+  return {
+    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Content-Type': 'application/json'
+  };
+}
+
+function json(obj, status, origin) {
+  return new Response(JSON.stringify(obj), {
+    status,
+    headers: corsHeaders(origin)
+  });
+}

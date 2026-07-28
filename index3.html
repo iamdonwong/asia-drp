@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亞洲債務舒緩策劃協會 | 專業債務重整與財務規劃諮詢平台</title>
+  <meta name="description" content="亞洲債務舒緩策劃協會提供透明、專業、具公信力的債務舒緩、IVA債務重組、DRP債務舒緩計劃及財務教育服務，協助個人重整財務健康。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --color-bg: #f8f9fa;
+      --color-surface: #ffffff;
+      --color-surface-2: #f1f3f5;
+      --color-divider: #e9ecef;
+      --color-border: rgba(15, 23, 42, 0.08);
+      --color-text: #0f172a;
+      --color-text-muted: #475569;
+      --color-text-faint: #94a3b8;
+      --color-text-inverse: #f8fafc;
+      --color-primary: #0f4c5c;
+      --color-primary-hover: #08333b;
+      --color-primary-highlight: #e0f2fe;
+      --color-success: #15803d;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.25rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.1);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.03);
+      --content-default: 1180px;
+      --font-display: 'Noto Serif TC', serif;
+      --font-body: 'Inter', 'Noto Sans TC', sans-serif;
+      --transition: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.7;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button {
+      font: inherit;
+      border: none;
+      background: none;
+      color: inherit;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+    }
+
+    .container {
+      width: min(calc(100% - 2.5rem), var(--content-default));
+      margin: 0 auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      background: var(--color-primary);
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      z-index: 30;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      min-height: 84px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 60%, black));
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-sm);
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
+      letter-spacing: 0.01em;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .brand-copy span {
+      color: var(--color-text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .menu-button {
+      min-width: 42px;
+      min-height: 42px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+    }
+
+    .menu-button:hover {
+      color: var(--color-text);
+      border-color: var(--color-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 0.25rem 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: width var(--transition);
+      border-radius: var(--radius-full);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--color-text);
+    }
+
+    .hero {
+      padding: clamp(4rem, 8vw, 8rem) 0 clamp(3rem, 6vw, 6rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: var(--text-2xl);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-5);
+    }
+
+    .hero p {
+      max-width: 58ch;
+      color: var(--color-text-muted);
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-8);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      margin-bottom: var(--space-10);
+    }
+
+    .btn {
+      min-height: 52px;
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-primary);
+      background: var(--color-surface-2);
+      transform: translateY(-2px);
+    }
+
+    .hero-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-6);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-divider);
+    }
+
+    .hero-facts strong {
+      display: block;
+      font-size: 1.25rem;
+      font-family: var(--font-display);
+      margin-bottom: 0.2rem;
+      color: var(--color-text);
+    }
+
+    .hero-facts span {
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+      line-height: 1.4;
+      display: block;
+    }
+
+    .hero-panel {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      gap: var(--space-6);
+      position: relative;
+    }
+
+    .hero-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-xl);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+      pointer-events: none;
+    }
+
+    .panel-card {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+    }
+
+    .panel-card small {
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .panel-card strong {
+      font-size: 1.15rem;
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--color-text);
+    }
+
+    .panel-list {
+      list-style: none;
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .panel-list li {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .panel-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      flex-shrink: 0;
+      margin-top: 0.5rem;
+      background: var(--color-success);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 20%, transparent);
+    }
+
+    section {
+      padding: clamp(4rem, 7vw, 6rem) 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-8);
+      align-items: flex-end;
+      margin-bottom: var(--space-10);
+    }
+
+    .section-head p {
+      color: var(--color-text-muted);
+      max-width: 50ch;
+      font-size: var(--text-base);
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      letter-spacing: -0.01em;
+    }
+
+    .trust-banner {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-6) 0;
+      text-align: center;
+    }
+
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: var(--space-6);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .trust-item svg {
+      color: var(--color-primary);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: var(--space-6);
+    }
+
+    .card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    }
+
+    .card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      margin-bottom: var(--space-5);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-3);
+      color: var(--color-text);
+    }
+
+    .card p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .statement {
+      background: linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 70%, black));
+      color: white;
+      border-radius: var(--radius-xl);
+      padding: clamp(2.5rem, 5vw, 3.5rem);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .statement h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin-bottom: var(--space-4);
+    }
+
+    .statement p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: var(--text-base);
+      line-height: 1.8;
+    }
+
+    .timeline {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .timeline-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--transition);
+    }
+
+    .timeline-item:hover {
+      border-color: var(--color-primary);
+    }
+
+    .timeline-item span {
+      display: inline-block;
+      font-size: var(--text-xs);
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-text);
+    }
+
+    .timeline-item p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .consultation-section {
+      background: var(--color-surface-2);
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+    }
+
+    .form-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(2rem, 5vw, 3rem);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .form-wrapper h3 {
+      font-size: 1.4rem;
+      color: var(--color-text);
+      margin-bottom: var(--space-3);
+    }
+
+    .form-wrapper p {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      max-width: 44ch;
+      margin: 0 auto var(--space-6);
+    }
+
+    .form-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      margin-top: var(--space-4);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-6);
+    }
+
+    .pillar {
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pillar strong {
+      display: block;
+      margin-bottom: var(--space-2);
+      font-size: 1.1rem;
+      color: var(--color-text);
+      font-family: var(--font-display);
+    }
+
+    .pillar p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .faq-container {
+      display: grid;
+      gap: var(--space-4);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: var(--space-5) var(--space-6);
+      text-align: left;
+      font-weight: 600;
+      font-size: var(--text-base);
+      color: var(--color-text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      cursor: pointer;
+    }
+
+    .faq-question svg {
+      transition: transform var(--transition);
+      flex-shrink: 0;
+      color: var(--color-text-muted);
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+      color: var(--color-primary);
+    }
+
+    .faq-answer {
+      padding: 0 var(--space-6) var(--space-6);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      display: none;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .notice {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      background: color-mix(in srgb, var(--color-primary-highlight) 30%, var(--color-surface));
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .notice h2 {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-3);
+      color: var(--color-text);
+    }
+
+    .notice p {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .notice ul {
+      margin-top: var(--space-4);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-4);
+      list-style: none;
+    }
+
+    .notice li {
+      background: var(--color-surface);
+      padding: var(--space-4) var(--space-5);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .notice li::before {
+      content: '✓';
+      color: var(--color-success);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-8);
+      align-items: center;
+      background: linear-gradient(135deg, var(--color-surface), var(--color-surface-2));
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(2.5rem, 5vw, 4rem);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin-bottom: var(--space-3);
+    }
+
+    .cta-box p {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      justify-content: flex-end;
+    }
+
+    .site-footer {
+      padding: var(--space-12) 0 var(--space-8);
+      border-top: 1px solid var(--color-divider);
+      color: var(--color-text-muted);
+      background: var(--color-surface);
+      font-size: var(--text-sm);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-8);
+      align-items: start;
+      margin-bottom: var(--space-8);
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--color-text);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-brand p {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      margin-top: 0.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-6);
+      justify-content: flex-end;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-primary);
+    }
+
+    .footer-bottom {
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--color-divider);
+      text-align: center;
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+
+    .mobile-nav {
+      display: none;
+      padding: 0 0 var(--space-4);
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .mobile-nav nav {
+      display: grid;
+      gap: var(--space-2);
+      padding-top: var(--space-3);
+    }
+
+    .mobile-nav a {
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      font-weight: 500;
+      font-size: var(--text-sm);
+    }
+
+    @media (max-width: 1060px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+        padding: var(--space-4) 0;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .footer-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pillars {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .cta-buttons,
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .menu-button { display: inline-flex; }
+      .hero-facts,
+      .card-grid,
+      .pillars { grid-template-columns: 1fr; }
+      h1 { max-width: 100%; }
+      .mobile-nav { display: none; }
+      .mobile-nav.open { display: block; }
+    }
+
+    @media (min-width: 761px) {
+      .menu-button { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳至內容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="亞洲債務舒緩策劃協會主頁">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v8"/>
+            <path d="M9 11l3-3 3 3"/>
+          </svg>
+        </div>
+        <div class="brand-copy">
+          <strong>亞洲債務舒緩策劃協會</strong>
+          <span>Asia Debt Relief Planning Association</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="主要導覽">
+          <a href="#about">關於協會</a>
+          <a href="#services">服務範圍</a>
+          <a href="#principles">工作原則</a>
+          <a href="#faq">常見問題</a>
+          <a href="#consultation">即時評估</a>
+          <a href="#contact">聯絡我們</a>
+        </nav>
+
+        <button class="menu-button" data-menu-toggle aria-label="打開選單">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mobile-nav" data-mobile-nav>
+      <nav aria-label="流動導覽">
+        <a href="#about">關於協會</a>
+        <a href="#services">服務範圍</a>
+        <a href="#principles">工作原則</a>
+        <a href="#faq">常見問題</a>
+        <a href="#consultation">即時評估</a>
+        <a href="#contact">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="trust-banner">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        中立專業諮詢
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        嚴格隱私保護
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        透明標準流程
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        財務素養普及
+      </div>
+    </div>
+  </div>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Professional Debt Relief & Financial Planning</div>
+          <h1>以專業、透明與教育為核心的債務舒緩諮詢平台</h1>
+          <p>亞洲債務舒緩策劃協會致力推動負責任的債務管理知識普及，協助公眾理性理解債務重整、財務規劃、風險評估與求助流程，建立更清晰、可持續的長遠財務決策框架。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#consultation">申請初步個案諮詢</a>
+            <a class="btn btn-secondary" href="#services">深入了解服務內容</a>
+          </div>
+          <div class="hero-facts" aria-label="重點指標">
+            <div><strong>教育先行</strong><span>先理解方案，再落實行動</span></div>
+            <div><strong>流程透明</strong><span>嚴謹文件與責任披露機制</span></div>
+            <div><strong>中立定位</strong><span>拒絕誇大承諾，守護當事人權益</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="協會定位摘要">
+          <div class="panel-card">
+            <small>核心架構</small>
+            <strong>財務教育 × 債務舒緩規劃 × 個案輔導</strong>
+            <p>為個人及家庭提供合規、可比較、可執行的債務處理資訊與階段流程支援。</p>
+          </div>
+          <div class="panel-card">
+            <small>主要支援項目</small>
+            <ul class="panel-list">
+              <li>債務現況與現金流風險初步評估</li>
+              <li>還款能力梳理、債務結構分析及文件規劃</li>
+              <li>公眾財務教育、專題講座與資源轉介</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div class="statement">
+          <h2>我們的使命與願景</h2>
+          <p>面對突如其來的財務困境或沉重利息負擔，大眾往往因資訊落差而感到無助。亞洲債務舒緩策劃協會以客觀中立、清晰明瞭的態度，協助當事人梳理債務選項，提升個人財務素養，重建穩健、有序的財務生活。</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>01 · Education First</span>
+            <h3>先教育，後規劃</h3>
+            <p>清楚向當事人剖析不同債務方案（如DRP、IVA等）的法律責任、合約限制及潛在影響，確保所有決定基於充分知情。</p>
+          </div>
+          <div class="timeline-item">
+            <span>02 · Data-Driven</span>
+            <h3>以實際數據為基礎</h3>
+            <p>摒棄盲目推銷，全面審視收入、日常支出、債務結構及還款能力，制定符合實際經濟狀況的路線圖。</p>
+          </div>
+          <div class="timeline-item">
+            <span>03 · Clear Guidance</span>
+            <h3>提供清晰下一步</h3>
+            <p>將繁複繁瑣的債務處理程序拆解為可執行的階段步驟，協助當事人安穩度過過渡期。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Our Services</div>
+            <h2>服務範圍與範疇</h2>
+          </div>
+          <p>本協會提供多元化的財務支援與諮詢服務，協助個人重整經濟秩序，擺脫債務困局。</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 5-7"></path></svg>
+            </div>
+            <h3>債務現況分析</h3>
+            <p>專業梳理各類債務類型、利息結構與每月現金流負荷，協助當事人全面掌握真實財務缺口。</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>還款方案教育</h3>
+            <p>以專業客觀角度解說各項舒緩機制的運作模式、合約規範、時間線與權利義務。</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            </div>
+            <h3>文件與流程準備</h3>
+            <p>指導正確收集與整理申請所需財務證明、資產負債清單，提升後續處理的流暢度與效率。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="consultation" class="consultation-section">
+      <div class="container">
+        <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto; flex-direction: column; align-items: center;">
+          <div class="eyebrow">Assessment Form</div>
+          <h2>債務舒緩初步評估申請</h2>
+          <p style="text-align: center;">請按以下按鈕前往 Google 表單填寫資料。本會將根據您提交的內容作初步分析，並安排專員跟進。</p>
+        </div>
+
+        <div class="form-wrapper">
+          <h3>安全提交初步資料</h3>
+          <p>為確保表單穩定運作及減少技術問題，評估申請將於 Google 表單中完成。提交後，我們會盡快透過電話或 WhatsApp 與您聯絡。</p>
+
+          <a
+            class="btn btn-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf5ijwHbK34yHAt-wNn2bPlevLTx59Bp1CSvHhNR-zf3VFnHA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="前往填寫 Google 表單（新分頁開啟）"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 3h7v7"></path>
+              <path d="M10 14L21 3"></path>
+              <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4"></path>
+            </svg>
+            前往填寫 Google 表單
+          </a>
+
+          <p class="form-note">請將 <code>YOUR_GOOGLE_FORM_LINK</code> 更換為你已發布的 Google Form 回應者連結。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Core Principles</div>
+            <h2>我們的核心工作原則</h2>
+          </div>
+          <p>堅持最高道德與專業標準，為每一位尋求協助的市民提供最可靠的守護。</p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <strong>透明披露</strong>
+            <p>服務收費、處理流程與條款均清晰說明，拒絕任何隱藏條目。</p>
+          </div>
+          <div class="pillar">
+            <strong>嚴守私隱</strong>
+            <p>高度重視當事人個人資料保護，落實嚴格的保密與安全管理機制。</p>
+          </div>
+          <div class="pillar">
+            <strong>客觀專業</strong>
+            <p>以實事求是、理性中立的態度溝通，絕不給予不切實際的承諾。</p>
+          </div>
+          <div class="pillar">
+            <strong>教育導向</strong>
+            <p>著眼於長遠財務健康的培育，讓當事人重獲自主掌控能力。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto; flex-direction: column; align-items: center;">
+          <div class="eyebrow">FAQ</div>
+          <h2>常見問題</h2>
+          <p style="text-align: center;">解答您對債務舒緩與協會服務的各項疑問</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>什麼是債務舒緩（DRP）與債務重組（IVA）的分別？</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              債務舒緩（DRP - Debt Relief Plan）通常是由債務人或其代理人直接向主要債權人（如各間銀行）個別協商重新訂立還款條件；而個人自願安排（IVA - Individual Voluntary Arrangement）則是具法律約束力的正式債務重整程序，需經由法庭及會計師或律師處理。本協會可為您詳細評估哪種方案更合適。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>向協會申請初步諮詢是否需要收費？</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              本協會致力推動公眾教育與推廣債務管理知識，初步個案諮詢與財務狀況分析均為公益性質，旨在協助當事人釐清方向，不含任何隱藏硬性收費。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>我的個人私隱及債務資料會被外泄嗎？</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              絕對不會。協會嚴格遵守相關個人資料私隱條例，所有經手之財務數據及個人身分資料均受最高級別的保密協議與加密系統保護，絕不向第三方無故透露。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container notice">
+        <h2>網站持續拓展與公眾資源</h2>
+        <p>本協會正不斷豐富網上資訊庫，未來將陸續增設更多實用工具與專欄內容，全面支援市民的理財需要。</p>
+        <ul>
+          <li>詳細債務舒緩與破產比較專頁</li>
+          <li>現金流試算與月供壓力評估工具</li>
+          <li>理財專欄、真實個案教學與防騙指南</li>
+          <li>中英雙語介面及線上預約系統</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container cta-box">
+        <div>
+          <div class="eyebrow">Contact Us</div>
+          <h2>聯絡協會專業專員</h2>
+          <p>如果您或身邊的人正受債務壓力困擾，歡迎隨時透過 WhatsApp 或電郵與我們聯絡，踏出重整財務的第一步。</p>
+        </div>
+
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="https://wa.me/85260247580" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            WhatsApp 專線
+          </a>
+
+          <a class="btn btn-secondary" href="mailto:info@asia-drp.org">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            info@asia-drp.org
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>亞洲債務舒緩策劃協會</strong>
+          <p>Asia Debt Relief Planning Association</p>
+          <p style="margin-top: 0.5rem; font-size: var(--text-xs);">致力於推動透明、專業與教育性的財務管理與債務重整知識普及。</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">關於協會</a>
+          <a href="#services">服務範圍</a>
+          <a href="#principles">工作原則</a>
+          <a href="#faq">常見問題</a>
+          <a href="#consultation">即時評估</a>
+          <a href="#contact">聯絡我們</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 亞洲債務舒緩策劃協會 版權所有</div>
+        <div>本網站內容僅供教育及參考用途，不構成正式法律或財務建議。</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const menuBtn = document.querySelector('[data-menu-toggle]');
+      const mobileNav = document.querySelector('[data-mobile-nav]');
+
+      menuBtn && menuBtn.addEventListener('click', function () {
+        const isOpen = mobileNav.classList.toggle('open');
+        menuBtn.setAttribute('aria-label', isOpen ? '關閉選單' : '打開選單');
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav && mobileNav.classList.remove('open');
+          menuBtn && menuBtn.setAttribute('aria-label', '打開選單');
+        });
+      });
+
+      document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+          const item = question.parentElement;
+          const isActive = item.classList.contains('active');
+
+          document.querySelectorAll('.faq-item').forEach(faq => {
+            faq.classList.remove('active');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
